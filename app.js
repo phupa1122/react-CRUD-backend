@@ -14,7 +14,7 @@ app.use(morgan('dev'));
 app.use(bodyPaser.json({ extended: true }));
 //app.use(morgan())
 app.use(cors(
-    {origin: 'http://localhost:5173'}
+    {origin: 'http://localhost:3000'}
 ));
 
 readdirSync('./routes')
