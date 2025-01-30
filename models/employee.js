@@ -5,18 +5,7 @@ const Employee = {
 
     getAllEmployee: (callback) => {
         const sql = `
-            SELECT
-                tb_employee.employee_id,
-                tb_employee.employee_name,
-                tb_position.position_name,
-                tb_employee.salary,
-                tb_employee.address,
-                tb_employee.phone_number,
-                tb_employee.image
-            FROM
-                tb_employee
-            INNER JOIN 
-                tb_position ON tb_employee.position_id = tb_position.position_id`;
+            SELECT * FROM users`;
         db.query(sql, callback);
     },
 

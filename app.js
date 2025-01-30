@@ -5,14 +5,14 @@ const cors = require('cors');
 const app = express();
 const bodyPaser = require('body-parser');
 const database = require('./config')
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3001;
 require('dotenv').config();
 
 database();
 
 app.use(morgan('dev'));
 app.use(bodyPaser.json({ extended: true }));
-app.use(morgan())
+//app.use(morgan())
 app.use(cors(
     {origin: 'http://localhost:5173'}
 ));
